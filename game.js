@@ -101,18 +101,10 @@ $(".btn").click(function () {
   checkAnswer(userClickedPattern.length - 1);
 });
 
-$(document).on("keydown", function() {
+$(document).on("keydown tap", function() {
     if (started === false) {
       $("h1").text("Level " + level);
       nextSequence();
       started = true;
     }
 });
-
-$(document).on("tap", function() {
-  if (started === false) {
-    $("h1").text("Level " + level);
-    nextSequence();
-    started = true;
-  }
-}
