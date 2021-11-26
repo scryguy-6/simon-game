@@ -101,7 +101,15 @@ $(".btn").click(function () {
   checkAnswer(userClickedPattern.length - 1);
 });
 
-$(document).on("keydown tap", function() {
+$(document).on("keydown", function() {
+    if (started === false) {
+      $("h1").text("Level " + level);
+      nextSequence();
+      started = true;
+    }
+});
+
+$(document).on("touchMove", function() {
     if (started === false) {
       $("h1").text("Level " + level);
       nextSequence();
