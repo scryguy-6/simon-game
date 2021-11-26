@@ -108,3 +108,11 @@ $(document).on("keydown", function() {
       started = true;
     }
 });
+
+$(document).on("tap", function() {
+  if (started === false) {
+    $("h1").text("Level " + level);
+    nextSequence();
+    started = true;
+  }
+}
